@@ -31,6 +31,11 @@ Shaders are heavily commented because there's where interesting stuff happens. :
 
 ## Building
 
+这个demo，编译是很顺利的，但是运行时会出问题。因为它缺少了原始的环境贴图(environment.hdr)和pbr材质文件(albedo.png, diffuse.png, normal.png, roughness.png)。上述缺少的文件在github上是以lfs(large file storage)的方式存储的，即使使用git lfs clone命令也会报错(原作者的lfs空间不足，需要续费)。
+我尝试使用其他的环境贴图.hdr、渲染模型.obj和相应的pbr材质文件，但是运行效果有问题。并没有复现作者展示的样子。
+
+鉴于该demo使用了多种图形学规范，可以深入分析一下问题原因。
+
 ### Windows
 
 #### Prerequisites
